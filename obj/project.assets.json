@@ -877,6 +877,22 @@
           }
         }
       },
+      "Selenium.Support/4.33.0": {
+        "type": "package",
+        "dependencies": {
+          "Selenium.WebDriver": "4.33.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/WebDriver.Support.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/WebDriver.Support.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Selenium.WebDriver/4.33.0": {
         "type": "package",
         "compile": {
@@ -3080,6 +3096,20 @@
         "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
         "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.nuspec",
         "runtimes/ubuntu.16.10-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
+      ]
+    },
+    "Selenium.Support/4.33.0": {
+      "sha512": "AsjM8PqJkueDBzw9StEHLLUq6bT7au9IY9mMLlwMxOdNYfu7PMJOqpHCMg2xVtLrUHGd6mADqrbFxcs9QWe6JA==",
+      "type": "package",
+      "path": "selenium.support/4.33.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/netstandard2.0/WebDriver.Support.dll",
+        "lib/netstandard2.0/WebDriver.Support.xml",
+        "selenium.support.4.33.0.nupkg.sha512",
+        "selenium.support.nuspec"
       ]
     },
     "Selenium.WebDriver/4.33.0": {
@@ -6073,6 +6103,7 @@
       "Microsoft.NET.Test.Sdk >= 17.14.0",
       "NUnit >= 4.3.2",
       "NUnit3TestAdapter >= 5.0.0",
+      "Selenium.Support >= 4.33.0",
       "Selenium.WebDriver >= 4.33.0",
       "Selenium.WebDriver.ChromeDriver >= 136.0.7103.11300",
       "SeleniumExtras.WaitHelpers >= 1.0.2",
@@ -6142,6 +6173,10 @@
             "target": "Package",
             "version": "[5.0.0, )"
           },
+          "Selenium.Support": {
+            "target": "Package",
+            "version": "[4.33.0, )"
+          },
           "Selenium.WebDriver": {
             "target": "Package",
             "version": "[4.33.0, )"
@@ -6179,7 +6214,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.409/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.410/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

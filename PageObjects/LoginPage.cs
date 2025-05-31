@@ -1,5 +1,4 @@
 using OpenQA.Selenium;
-using SeleniumExtras.PageObjects;
 
 public class LoginPage
 {
@@ -9,14 +8,6 @@ public class LoginPage
     {
         this.driver = driver;
     }
-  /*  private readonly IWebDriver driver;
-    [FindsBy(How = How.Name, Using = "uid")]
-    private IWebElement user_name_field;
-    [FindsBy(How = How.Name, Using = "password")]
-    private IWebElement password_field;
-    [FindsBy(How = How.Name, Using = "btnLogin")]
-    private IWebElement login_button;*/
-    
         private IWebElement user_name_field => driver.FindElement(By.Name("uid"));
         private IWebElement password_field => driver.FindElement(By.Name("password"));
         private IWebElement login_button => driver.FindElement(By.Name("btnLogin"));
