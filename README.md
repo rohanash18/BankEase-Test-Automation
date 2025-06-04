@@ -1,12 +1,31 @@
-# BankEase-Test-Automation
+# BankEase-Test-Automation🧪
 
 # Selenium C# Automation Framework
 
 ## Project Overview
-This project is an automation framework for the demo banking website Guru99 using Selenium with C#. The framework aims to automate various tasks and test scenarios to ensure the website's functionality and performance.
 
-## Tech Stack
-- Selenium WebDriver
-- C#
-- NUnit (for testing)
-- Git (for version control)
+- ✅ **API Testing** using RestSharp
+- ✅ **UI Testing** using Selenium WebDriver (if applicable)
+- ✅ **Test Framework**: NUnit
+
+
+## 🔧 Tech Stack
+
+- **Language**: C#
+- **API Testing**: RestSharp
+- **Test Framework**: NUnit
+- **JSON Parsing**: Newtonsoft.Json
+- **Build Tool**: .NET CLI / Visual Studio
+- **Target API**: ReqRes
+
+## 🛠 How to Run Tests
+
+**clone the repository** 
+git clone https://github.com/rohanash18/BankEase-Test-Automation.git
+cd BankEase-Test-Automation
+
+**Restore Dependencies**
+dotnet restore
+
+**Run Tests**
+dotnet test
