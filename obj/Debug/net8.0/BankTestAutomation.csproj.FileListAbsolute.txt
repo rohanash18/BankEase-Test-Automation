@@ -174,3 +174,5 @@ C:\Users\roharish\OneDrive - Capgemini\Desktop\Selenium C#\BankEase-Test-Automat
 C:\Users\roharish\OneDrive - Capgemini\Desktop\Selenium C#\BankEase-Test-Automation\BankTestAutomation\obj\Debug\net8.0\BankTestAutomation.genruntimeconfig.cache
 C:\Users\roharish\OneDrive - Capgemini\Desktop\Selenium C#\BankEase-Test-Automation\BankTestAutomation\obj\Debug\net8.0\ref\BankTestAutomation.dll
 C:\Users\roharish\OneDrive - Capgemini\Desktop\Selenium C#\BankEase-Test-Automation\BankTestAutomation\obj\Debug\net8.0\BankTestAutomation.sourcelink.json
+C:\Users\roharish\OneDrive - Capgemini\Desktop\Selenium C#\BankEase-Test-Automation\BankTestAutomation\bin\Debug\net8.0\RestSharp.dll
+C:\Users\roharish\OneDrive - Capgemini\Desktop\Selenium C#\BankEase-Test-Automation\BankTestAutomation\bin\Debug\net8.0\WebDriver.Support.dll
