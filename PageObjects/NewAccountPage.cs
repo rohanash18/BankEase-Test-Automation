@@ -1,6 +1,7 @@
 
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
+using SeleniumExtras.WaitHelpers;
 public class NewAccountPage
 {
     private readonly IWebDriver driver;
@@ -22,10 +23,10 @@ public class NewAccountPage
     {
         NewAccount.Click();
     }
-    public void FillNewAccForm(string customerId , string AccType , string initialDeposit)
+    public void FillNewAccForm(string customerId, string AccType, string initialDeposit)
     {
         CustomerId.SendKeys(customerId);
-        
+
         var s = new SelectElement(DropDownAcc);
         s.SelectByValue(AccType);
         IniDeposit.SendKeys(initialDeposit);
@@ -33,6 +34,9 @@ public class NewAccountPage
     }
     public Boolean ValidateSuccessfulRegistration()
     {
+
+        WebDriverWait wait = new(driver, TimeSpan.FromSeconds(5));
+        wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//p[@class='heading3']")));
         return SuccessMessage.Displayed;
     }
     public string FetchAccId()

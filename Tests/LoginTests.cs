@@ -1,10 +1,11 @@
 
 using NUnit.Framework;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 
 namespace BankTestAutomation.LoginTest
 {
-    [TestFixture]
+    [TestFixture , Order(1)]
     public class LoginTests : BaseTest
     {
         // private IWebDriver driver;
@@ -12,7 +13,7 @@ namespace BankTestAutomation.LoginTest
         private HomePage homePage;
 
 
-        [Test]
+        [Test, Order(1)]
         public void ValidLoginTest()
         {
             // loginPage.LoginAs("mngr623805", "nUpevAz");
@@ -20,12 +21,18 @@ namespace BankTestAutomation.LoginTest
             PerformLogin("mngr623805", "nUpevAz");
             Assert.That(homePage.isSuccessfulLogin(), Is.True);
         }
-        [Test]
+        [Test, Order(2)]
         public void InValidLoginTest()
         {
             // loginPage.LoginAs("mngrXXXX", "invalidPassword");
             PerformLogin("mngrXXXX", "invalidPassword");
-            IAlert alert = driver.SwitchTo().Alert();
+
+            //IAlert alert = driver.SwitchTo().Alert();
+
+
+            WebDriverWait wait = new(driver, TimeSpan.FromSeconds(5));
+            IAlert alert = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.AlertIsPresent());
+
             Assert.That(alert.Text, Is.EqualTo("User or Password is not valid"));
             alert.Accept();
         }

@@ -2,7 +2,7 @@
 using Newtonsoft.Json.Linq;
 using NUnit.Framework;
 
-[TestFixture]
+[TestFixture , Order(4)]
 public class ApiTests
 {
     private ApiTestHelper apiHelper;
