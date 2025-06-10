@@ -5,7 +5,7 @@ using OpenQA.Selenium.Support.UI;
 
 namespace BankTestAutomation.LoginTest
 {
-    [TestFixture , Order(1)]
+    [TestFixture , Order(1) , Category("UI") , Category("Smoke") , Category("Regression")]
     public class LoginTests : BaseTest
     {
         // private IWebDriver driver;

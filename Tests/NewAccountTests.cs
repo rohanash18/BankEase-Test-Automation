@@ -3,7 +3,7 @@ using NUnit.Framework;
 
 namespace BankTestAutomation.NewAccountTest
 {
-    [TestFixture , Order(2)]
+    [TestFixture , Order(2), Category("UI") , Category("Regression")]
     public class NewAccountTests : BaseTest
     {
         private NewAccountPage naPage;

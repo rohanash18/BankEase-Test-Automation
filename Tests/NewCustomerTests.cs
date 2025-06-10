@@ -6,7 +6,7 @@ using TechTalk.SpecFlow;
 
 namespace BankTestAutomation.NewCustomerTest
 {
-    [TestFixture , Order(3)]
+    [TestFixture , Order(3) , Category("UI") , Category("Regression")]
     public class NewCustomerTests : BaseTest
     {
         // private IWebDriver driver;
