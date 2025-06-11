@@ -16,25 +16,42 @@ namespace BankTestAutomation.LoginTest
         [Test, Order(1)]
         public void ValidLoginTest()
         {
-            // loginPage.LoginAs("mngr623805", "nUpevAz");
-            homePage = new HomePage(driver);
-            PerformLogin("mngr623805", "nUpevAz");
-            Assert.That(homePage.isSuccessfulLogin(), Is.True);
+            try
+            {
+                // loginPage.LoginAs("mngr623805", "nUpevAz");
+                homePage = new HomePage(driver);
+                PerformLogin("mngr623805", "nUpevAz");
+                test.Info("Logging in with credentials");
+                Assert.That(homePage.isSuccessfulLogin(), Is.True);
+                test.Pass("Successfully Logged in");
+            }
+            catch(Exception e)
+            {
+                test.Fail("Test Failed : " + e.Message);
+            }
         }
         [Test, Order(2)]
         public void InValidLoginTest()
         {
-            // loginPage.LoginAs("mngrXXXX", "invalidPassword");
-            PerformLogin("mngrXXXX", "invalidPassword");
+            try
+            {
+                // loginPage.LoginAs("mngrXXXX", "invalidPassword");
+                PerformLogin("mngrXXXX", "invalidPassword");
+                test.Info("Called Perform Login");
+                //IAlert alert = driver.SwitchTo().Alert();
 
-            //IAlert alert = driver.SwitchTo().Alert();
 
-
-            WebDriverWait wait = new(driver, TimeSpan.FromSeconds(5));
-            IAlert alert = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.AlertIsPresent());
-
-            Assert.That(alert.Text, Is.EqualTo("User or Password is not valid"));
-            alert.Accept();
+                WebDriverWait wait = new(driver, TimeSpan.FromSeconds(5));
+                IAlert alert = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.AlertIsPresent());
+                
+                Assert.That(alert.Text, Is.EqualTo("User or Password is not valid"));
+                test.Pass("Invalid Login test successful");
+                alert.Accept();
+            }
+            catch (Exception e)
+            {
+                test.Fail("Test Failed : " + e.Message);
+            }
         }
 
     }
